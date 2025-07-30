@@ -44,10 +44,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run training script
-        run: python ./src/train.py
+        run: python -m src.train
 
       - name: Run quantization script
-        run: python ./src/quantize.py
+        run: python -m src.quantize
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
