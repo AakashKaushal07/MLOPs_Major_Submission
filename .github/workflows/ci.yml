@@ -2,7 +2,7 @@ name: MLOps CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, add-ci-cd ] # Added a test branch to check execution of actions
+    branches: [ main ] # Added a test branch to check execution of actions
 
 jobs:
   test_suite:

@@ -1,5 +1,3 @@
-# src/predict.py
-
 import joblib
 import os
 import numpy as np
