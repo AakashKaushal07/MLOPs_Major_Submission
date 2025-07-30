@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import os
 from sklearn.metrics import r2_score
-from utils import load_data
+from src.utils import load_data
 
 print("Starting quantization process...")
 
