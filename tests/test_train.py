@@ -8,7 +8,7 @@ from src.utils import load_data
 @pytest.fixture(scope="module")
 def trained_model_and_data():
     os.system("python -m src.train")
-    model = joblib.load("trained_models/model.joblib")
+    model = joblib.load("./trained_models/model.joblib")
     _, X_test, _, y_test = load_data()
 
     return model, X_test, y_test
