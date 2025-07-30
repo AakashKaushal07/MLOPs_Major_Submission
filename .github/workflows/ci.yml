@@ -47,7 +47,7 @@ jobs:
         run: python ./src/train.py
 
       - name: Run quantization script
-        run: python -m ./src/quantize.py
+        run: python ./src/quantize.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
