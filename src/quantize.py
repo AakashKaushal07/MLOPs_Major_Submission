@@ -4,11 +4,11 @@ import joblib
 import numpy as np
 import os
 from sklearn.metrics import r2_score
-from utils import load_data
+from src.utils import load_data
 
 print("Starting quantization process...")
 
-model_path = os.path.join("trained_models", "model.joblib")
+model_path = os.path.join("./trained_models", "model.joblib")
 model = joblib.load(model_path)
 print("Trained model loaded.")
 
@@ -17,7 +17,7 @@ intercept = model.intercept_
 params = {"coef": coef, "intercept": intercept}
 print("Extracted model parameters.")
 
-unquant_path = os.path.join("trained_models", "unquant_params.joblib")
+unquant_path = os.path.join("./trained_models", "unquant_params.joblib")
 joblib.dump(params, unquant_path)
 print(f"Unquantized parameters saved to {unquant_path}")
 
@@ -39,7 +39,7 @@ quant_params = {
     "scale": scale,
     "zero_point": zero_point,
 }
-quant_path = os.path.join("trained_models", "quant_params.joblib")
+quant_path = os.path.join("./trained_models", "quant_params.joblib")
 joblib.dump(quant_params, quant_path)
 print(f"Quantized parameters saved to {quant_path}")
 
