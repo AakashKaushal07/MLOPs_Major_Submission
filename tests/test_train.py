@@ -1,6 +1,5 @@
 import pytest
 import joblib
-import os
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from src.utils import load_data
